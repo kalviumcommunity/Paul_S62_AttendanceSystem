@@ -1,5 +1,6 @@
 package com.school;
 
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("--- School Attendance System ---");
@@ -26,5 +27,4 @@ public class Main {
             if (course != null) course.displayDetails();
         }
         System.out.println("\nSession 2: Core Domain Modelling Complete.");
-    }
-}
+
