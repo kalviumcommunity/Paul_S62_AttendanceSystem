@@ -8,7 +8,7 @@ public class Main {
         students[0] = new Student();
         students[0].setDetails(1, "Alice Wonderland");
         students[1] = new Student();
-        students[1].setDetails(2, "Bob The Builder");
+        students[1].setDetails(2, "Bob The Builde");
 
         Course[] courses = new Course[2];
         courses[0] = new Course();
