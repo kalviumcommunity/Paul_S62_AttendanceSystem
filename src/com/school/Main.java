@@ -1,30 +1,24 @@
 package com.school;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("--- School Attendance System ---");
+        Student s1 = new Student("Teajuice");
+        Student s2 = new Student("Joshua Kuttan");
 
-        Student[] students = new Student[2];
-        students[0] = new Student();
-        students[0].setDetails(1, "Alice Wonderland");
-        students[1] = new Student();
-        students[1].setDetails(2, "Bob The Builde");
+        Course c1 = new Course("Calculus");
+        Course c2 = new Course("Biology");
 
-        Course[] courses = new Course[2];
-        courses[0] = new Course();
-        courses[0].setDetails("CS101", "Intro to Programming");
-        courses[1] = new Course();
-        courses[1].setDetails("MA202", "Linear Algebra");
+        List<AttendanceRecord> attendanceLog = new ArrayList<>();
 
-        System.out.println("\nRegistered Students:");
-        for (Student student : students) {
-            if (student != null) student.displayDetails();
+        attendanceLog.add(new AttendanceRecord(s1.getStudentId(), c1.getCourseId(), "Late"));
+        attendanceLog.add(new AttendanceRecord(s2.getStudentId(), c2.getCourseId(), "Present"));
+        attendanceLog.add(new AttendanceRecord(s1.getStudentId(), c2.getCourseId(), "Absent")); 
+
+        for (AttendanceRecord record : attendanceLog) {
+            record.displayDetails();
         }
-
-        System.out.println("\nAvailable Courses:");
-        for (Course course : courses) {
-            if (course != null) course.displayDetails();
-        }
-        System.out.println("\nSession 2: Core Domain Modelling Complete.");
-
+    }
+}
